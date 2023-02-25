@@ -1,0 +1,16 @@
+@mixin tableStyle{
+    @media (max-width: 967px){
+     @content;
+    }
+} 
+@mixin mobileStyle{
+    @media (max-width: 552px){
+        @content;
+    }
+} 
+@mixin laptopStyle(){
+    @media (max-width: 1023px){
+       
+    @content;
+    }
+} 
