@@ -1,0 +1,116 @@
+@import "./media.scss";
+$color:rgb(159, 149, 220) rgb(159, 164, 177) rgb(185, 177, 232) rgb(190, 202, 238) rgb(203, 203, 247) rgb(228, 228, 244) rgb(236, 236, 244);
+$btncolor:#485C67;
+$baccolor: rgb(4, 4, 50);
+.bgcolor
+{
+    background-color:$baccolor;
+    
+}
+.nav-item:hover
+{
+    background-color: rgb(224, 224, 240);
+
+    
+    i{
+        color:rgb(2, 1, 25) !important;
+    }
+    
+}
+.card
+{
+   
+    background-color: rgb(252, 252, 254);
+    border: 1px solid rgb(191, 175, 228);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.card2
+{
+    background-color:#7e7ea7;
+
+    p:hover
+    {
+        background-color: #CCCCCC;
+      
+        padding: 0px;
+    }
+    .card-body
+    {
+        background-color: white;
+    }
+}
+.interset
+{
+    
+        @for $i from 1 through length($color)
+        {
+            span:nth-child(#{$i})
+            {
+                background-color:nth($color , $i );
+            }
+        }
+        
+        color: rgb(2, 1, 25);
+}
+
+.lookpro
+{
+    background-color: rgb(214, 220, 234);
+}
+.btn-primary
+{
+background-color: $btncolor;
+&:hover
+{
+    background-color:rgb(141, 143, 164);
+}
+}
+.size
+{
+    font-size: 1.2em;
+}
+footer
+{
+    background-color:$btncolor;
+    color: rgb(226, 224, 241);
+}
+.copyright
+{
+    background-color:#021e2e;
+    color: rgb(226, 224, 241);
+    
+}
+//mixin
+@include tableStyle()
+{
+   
+    .hideclass,.lookpro
+    {
+        display: none;
+    }
+   button{
+        width: 120px;
+    }
+    .img
+    {
+        
+        height: 250px;
+    }
+    .img1
+    {
+        
+        height: 150px;
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+#msg
+{
+    color:white;
+    text-align: center;
+}
+.scrollspy-example
+{
+}
